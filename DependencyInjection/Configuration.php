@@ -2,6 +2,7 @@
 
 namespace Oihso\TelegramBotApiBundle\DependencyInjection;
 
+use App\Kernel;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
