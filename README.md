@@ -2,13 +2,25 @@ TelegramBotApiBundle
 ===================
 A symfony wrapper bundle for  [Telegram Bot API](https://core.telegram.org/bots/api).
 
+## What's the difference with the original one?
+- Updated to Symfony 6.4/7.0
+- Fixed some deprecations
+
 ## Install
 
 Via Composer
 
 ``` bash
-composer require borsaco/telegram-bot-api-bundle
+composer require oihso/telegram-bot-api-bundle
 ```
+
+### If moving from original bundle
+1. Remove old package by running `composer remove borsaco/telegram-bot-api-bundle`
+2. Change use statements in your code from `Borsaco\...` to `Oihso\...`
+3. Install new package by running `composer require oihso/telegram-bot-api-bundle`
+
+New version of package is fully compataible with the old one. No need to change config/code except for use statements
+
 
 ## Configure the bundle
 
