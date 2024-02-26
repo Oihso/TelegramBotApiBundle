@@ -1,5 +1,5 @@
 {
-  "name": "borsaco/telegram-bot-api-bundle",
+  "name": "oihso/telegram-bot-api-bundle",
   "type": "symfony-bundle",
   "description": "A simple wrapper for telegram-bot-api.",
   "keywords": ["telegram", "bot", "api", "telegram-bot-api", "php", "symfony"],
@@ -8,17 +8,24 @@
   "license": "BSD-3-Clause",
   "authors": [
     {
+      "name": "Ivan (Oihso) Tretyakov",
+      "role": "Developer"
+    },
+    {
       "name": "Alireza Seddighi",
       "email": "seddighi.alireza78@gmail.com",
-      "role": "Developer"
+      "role": "Original lib developer"
     }
   ],
   "require": {
-    "php": ">=7.2",
-    "symfony/framework-bundle": "^5.1 || ^6.0",
-    "irazasyed/telegram-bot-sdk": "^3.4"
+    "php": "^8.2 || ^8.3",
+    "symfony/framework-bundle": "^6.4 || ^7.0",
+    "symfony/http-kernel": "^6.4 || ^7.0",
+    "irazasyed/telegram-bot-sdk": "^3.4",
+    "symfony/dependency-injection": "^6.4 || ^7.0",
+    "symfony/console": "^6.4 || ^7.0"
   },
   "autoload": {
-    "psr-4": { "Borsaco\\TelegramBotApiBundle\\": "" }
+    "psr-4": { "Oihso\\TelegramBotApiBundle\\": "" }
   }
 }

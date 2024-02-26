@@ -1,6 +1,6 @@
 <?php
 
-namespace Borsaco\TelegramBotApiBundle;
+namespace Oihso\TelegramBotApiBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -51,7 +51,7 @@ telegram_bot_api:
 
 You can access the bot in the controller with :
 ```php
-    use Borsaco\TelegramBotApiBundle\Service\Bot;
+    use Oihso\TelegramBotApiBundle\Service\Bot;
 
     ...
 

@@ -1,21 +1,25 @@
 <?php
 
-namespace Borsaco\TelegramBotApiBundle\Service;
+namespace Oihso\TelegramBotApiBundle\Service;
 
-use Borsaco\TelegramBotApiBundle\DependencyInjection\Factory\BotFactory;
+use Oihso\TelegramBotApiBundle\DependencyInjection\Factory\BotFactory;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Telegram\Bot\Api;
+use Telegram\Bot\Exceptions\TelegramSDKException;
 
 class Bot
 {
-    private $config;
+    private string|array|bool|int|null|float|\UnitEnum $config;
 
     public function __construct(ContainerInterface $container)
     {
         $this->config = $container->getParameter('telegram_bot_api.config');
     }
-
-    public function getBot(?string $name = null): Api
+	
+	/**
+	 * @throws TelegramSDKException
+	 */
+	public function getBot(?string $name = null): Api
     {
         $factory = new BotFactory();
 

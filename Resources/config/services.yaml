@@ -2,23 +2,23 @@ services:
 
     #services:
 
-    Borsaco\TelegramBotApiBundle\Service\Bot:
+    Oihso\TelegramBotApiBundle\Service\Bot:
         arguments: ['@service_container']
 
     # commands:
 
-    Borsaco\TelegramBotApiBundle\Command\WebhookSetCommand:
-        arguments: ['@Borsaco\TelegramBotApiBundle\Service\Bot']
+    Oihso\TelegramBotApiBundle\Command\WebhookSetCommand:
+        arguments: ['@Oihso\TelegramBotApiBundle\Service\Bot']
         tags:
             - { name: console.command }
 
-    Borsaco\TelegramBotApiBundle\Command\WebhookDeleteCommand:
-        arguments: ['@Borsaco\TelegramBotApiBundle\Service\Bot']
+    Oihso\TelegramBotApiBundle\Command\WebhookDeleteCommand:
+        arguments: ['@Oihso\TelegramBotApiBundle\Service\Bot']
         tags:
             - { name: console.command }
 
-    Borsaco\TelegramBotApiBundle\Command\WebhookInfoCommand:
-        arguments: ['@Borsaco\TelegramBotApiBundle\Service\Bot']
+    Oihso\TelegramBotApiBundle\Command\WebhookInfoCommand:
+        arguments: ['@Oihso\TelegramBotApiBundle\Service\Bot']
         tags:
             - { name: console.command }
 

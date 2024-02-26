@@ -1,8 +1,9 @@
 <?php
 
-namespace Borsaco\TelegramBotApiBundle\Command;
+namespace Oihso\TelegramBotApiBundle\Command;
 
-use Borsaco\TelegramBotApiBundle\Service\Bot;
+use Oihso\TelegramBotApiBundle\Service\Bot;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -11,16 +12,14 @@ use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Telegram\Bot\Exceptions\TelegramSDKException;
-use TelegramBot\Api\BotApi;
 
+#[AsCommand(name: 'telegram:bot:webhook:set')]
 class WebhookSetCommand extends Command
 {
     /**
      * @var Bot
      */
-    private $bot;
-
-    protected static $defaultName = 'telegram:bot:webhook:set';
+    private Bot $bot;
 
     /**
      * @inheritDoc
@@ -35,8 +34,8 @@ class WebhookSetCommand extends Command
     /**
      * @inheritDoc
      */
-    protected function configure()
-    {
+    protected function configure(): void
+	{
         $this
             ->addArgument('name', InputArgument::OPTIONAL, 'The bot name (is set in configuration file)')
             ->addArgument('url', InputArgument::OPTIONAL, 'Webhook url')
