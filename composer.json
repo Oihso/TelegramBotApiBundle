@@ -26,6 +26,8 @@
     "symfony/console": "^6.4 || ^7.0"
   },
   "autoload": {
-    "psr-4": { "Oihso\\TelegramBotApiBundle\\": "" }
+    "psr-4": {
+      "Oihso\\TelegramBotApiBundle\\": "./"
+    }
   }
 }
