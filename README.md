@@ -3,7 +3,7 @@ TelegramBotApiBundle
 A symfony wrapper bundle for  [Telegram Bot API](https://core.telegram.org/bots/api).
 
 ## What's the difference with the original one?
-- Updated to Symfony 6.4/7.0
+- Updated to Symfony 6.4/~~7.0~~ (Temporarily removed Symfony 7 support until the authors of irazasyed/telegram-bot-sdk and illuminate/support will bump their package requirements)
 - Fixed some deprecations
 
 ## Install
